@@ -1,0 +1,4 @@
+split horizontall: ctrl + b > "
+set synchronize-panes on
+set synchronize-panes off
+select-layout even-vertical

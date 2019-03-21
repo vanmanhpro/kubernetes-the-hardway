@@ -1,0 +1,16 @@
+{
+  "CN": "system:node:ip-10-240-0-21",
+  "key": {
+    "algo": "rsa",
+    "size": 2048
+  },
+  "names": [
+    {
+      "C": "VN",
+      "L": "Vinh",
+      "O": "system:nodes",
+      "OU": "Kubernetes The Hard Way",
+      "ST": "NgheAn"
+    }
+  ]
+}
