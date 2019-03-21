@@ -9,3 +9,4 @@ export TARGET_GROUP_ARN=arn:aws:elasticloadbalancing:ap-southeast-2:492995901256
 export KUBERNETES_PUBLIC_ADDRESS=kubernetes-9b9525ff42b7f693.elb.ap-southeast-2.amazonaws.com
 export IMAGE_ID=ami-020c9730d79a10ec0
 export ENCRYPTION_KEY=fGW7+qUybROwZaf3fG8LWZ+f3LyzkvSnCPJ3TlsQrdg=
+export AWS_REGION=ap-southeast-2
