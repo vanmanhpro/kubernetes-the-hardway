@@ -1,5 +1,5 @@
 #!/bin/bash
-
+source resource_record.sh
 # certificate authority certs
 cat > ca-config.json <<EOF
 {
@@ -245,32 +245,15 @@ cfssl gencert \
   service-account-csr.json | cfssljson -bare service-account
 
 # copy certs to nodes
-# for instance in node-0 node-1 node-2; do
-#   external_ip=$(aws ec2 describe-instances \
-#     --filters "Name=tag:Name,Values=${instance}" \
-#     --output text --query 'Reservations[].Instances[].PublicIpAddress')
-
-#   scp -i kubernetes_hardway.id_rsa ca.pem ${instance}-key.pem ${instance}.pem ubuntu@${external_ip}:~/
-# done
-# replace with this, after you've filled in the config file
 for instance in node-0 node-1 node-2; do
-  scp ca.pem ${instance}-key.pem ${instance}.pem ${instance}:~/
+  scp -F config\
+    ca.pem ${instance}-key.pem ${instance}.pem ${instance}:~/
 done
 
 
 # copy certs to masters
-# for instance in master-0 master-1 master-2; do
-#   external_ip=$(aws ec2 describe-instances \
-#     --filters "Name=tag:Name,Values=${instance}" \
-#     --output text --query 'Reservations[].Instances[].PublicIpAddress')
-
-#   scp -i kubernetes_hardway \
-#     ca.pem ca-key.pem kubernetes-key.pem kubernetes.pem \
-#     service-account-key.pem service-account.pem ubuntu@${external_ip}:~/
-# done
-# replace with this, after you've filled in the config file
 for instance in master-0 master-1 master-2; do
-    scp \
+    scp -F config\
         ca.pem ca-key.pem kubernetes-key.pem kubernetes.pem \
         service-account-key.pem service-account.pem ${instance}:~
 done

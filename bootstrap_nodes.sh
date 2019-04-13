@@ -106,8 +106,6 @@ EOF
 # configure kubelet
 WORKER_NAME=$(curl -s http://169.254.169.254/latest/user-data/ \
 | tr "|" "\n" | grep "^name" | cut -d"=" -f2)
-# replace with this
-WORKER_NAME=node-$(curl -s http://169.254.169.254/latest/user-data/ | tr "|" "\n" | grep "^name" | awk -F '=worker-' '{print $2}')
 echo "${WORKER_NAME}"
 
 sudo mv ${WORKER_NAME}-key.pem ${WORKER_NAME}.pem /var/lib/kubelet/
@@ -191,6 +189,3 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl enable containerd kubelet kube-proxy
 sudo systemctl start containerd kubelet kube-proxy
-
-# verify the nodes, do this on a master
-kubectl get nodes --kubeconfig admin.kubeconfig

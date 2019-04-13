@@ -1,4 +1,6 @@
 #!/bin/bash
+cd artifacts
+source resource_record.sh
 aws ec2 terminate-instances \
   --instance-ids \
     $(aws ec2 describe-instances \

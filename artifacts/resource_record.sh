@@ -1,0 +1,10 @@
+export VPC_ID=vpc-0b97cbe8bbc3254c0
+export SUBNET_ID=subnet-02e044f622bac7396
+export INTERNET_GATEWAY_ID=igw-082fd41456019727f
+export ROUTE_TABLE_ID=rtb-03056818a2958bcb1
+export SECURITY_GROUP_ID=sg-0c90b3fc4c0af4628
+export LOAD_BALANCER_ARN=arn:aws:elasticloadbalancing:ap-southeast-2:492995901256:loadbalancer/net/kubernetes-hardway/bc6d457e88736ffd
+export TARGET_GROUP_ARN=arn:aws:elasticloadbalancing:ap-southeast-2:492995901256:targetgroup/kubernetes-hardway/5e172fe0b7c33131
+export KUBERNETES_PUBLIC_ADDRESS=kubernetes-hardway-bc6d457e88736ffd.elb.ap-southeast-2.amazonaws.com
+export IMAGE_ID=ami-09e6fd1e6e5bec813
+export ENCRYPTION_KEY=ejtxZg8ksBGsl+3Ecp2HZzLxpY5CY+tb44+O3uIAlPw=

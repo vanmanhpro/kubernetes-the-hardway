@@ -1,0 +1,48 @@
+Host master-0
+StrictHostKeyChecking no
+UserKnownHostsFile=/dev/null
+hostname 13.211.156.38
+IdentityFile kubernetes_hardway.id_rsa
+User ubuntu
+ServerAliveInterval 15
+ForwardAgent yes
+Host master-1
+StrictHostKeyChecking no
+UserKnownHostsFile=/dev/null
+hostname 13.239.85.55
+IdentityFile kubernetes_hardway.id_rsa
+User ubuntu
+ServerAliveInterval 15
+ForwardAgent yes
+Host master-2
+StrictHostKeyChecking no
+UserKnownHostsFile=/dev/null
+hostname 13.211.236.112
+IdentityFile kubernetes_hardway.id_rsa
+User ubuntu
+ServerAliveInterval 15
+ForwardAgent yes
+Host node-0
+StrictHostKeyChecking no
+UserKnownHostsFile=/dev/null
+hostname 13.210.111.133
+IdentityFile kubernetes_hardway.id_rsa
+User ubuntu
+ServerAliveInterval 15
+ForwardAgent yes
+Host node-1
+StrictHostKeyChecking no
+UserKnownHostsFile=/dev/null
+hostname 13.239.0.229
+IdentityFile kubernetes_hardway.id_rsa
+User ubuntu
+ServerAliveInterval 15
+ForwardAgent yes
+Host node-2
+StrictHostKeyChecking no
+UserKnownHostsFile=/dev/null
+hostname 13.239.21.185
+IdentityFile kubernetes_hardway.id_rsa
+User ubuntu
+ServerAliveInterval 15
+ForwardAgent yes
